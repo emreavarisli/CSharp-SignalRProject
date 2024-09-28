@@ -1,4 +1,5 @@
 ﻿using SignalR.BusinessLayer.Abstract;
+using SignalR.DataAccessLayer.Abstract;
 using SignalR.DataAccessLayer.EntityFramework;
 using SignalR.EntityLayer.Entities;
 using System;
@@ -11,9 +12,9 @@ namespace SignalR.BusinessLayer.Concrete
 {
     public class CategoryManager : ICategoryService
     { 
-        private readonly EfCategoryDal _categoryDal;
+        private readonly ICategoryDal _categoryDal;
 
-        public CategoryManager(EfCategoryDal categoryDal)
+        public CategoryManager(ICategoryDal categoryDal)
         {
             _categoryDal = categoryDal;
         }
