@@ -47,7 +47,7 @@ namespace SignalRApi.Controllers
             _bookingService.TDelete(values);
             return Ok("Rezervasyon Silindi");
         }
-        [HttpPost]
+        [HttpPut]
         public IActionResult UpdateBooking(UpdateBookingDto updateBookingDto)
         {
             Booking booking = new Booking()
